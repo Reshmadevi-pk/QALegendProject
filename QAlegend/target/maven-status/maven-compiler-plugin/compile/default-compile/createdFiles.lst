@@ -1,0 +1,14 @@
+PageClasses\QAlegendCustomerGroupsPage.class
+PageClasses\QAlegendUserPage.class
+PageClasses\QAlegendRolesPage.class
+Utilities\DateUtilities.class
+PageClasses\QAlegendCustomersPage.class
+Utilities\ExcelUtility.class
+PageClasses\QAlegendLoginPage.class
+Utilities\extentReportNG.class
+PageClasses\QAlegendProductsPage.class
+PageClasses\QAlegendSalesCommissionPage.class
+PageClasses\QAlegendContactsPage.class
+AutomationCore\BaseClass.class
+PageClasses\QAlegendHomePage.class
+Utilities\PageUtilities.class

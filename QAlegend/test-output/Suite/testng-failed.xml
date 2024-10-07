@@ -9,7 +9,7 @@
     <classes>
       <class name="QAlegendTestCases.TestCases">
         <methods>
-          <include name="productsPage"/>
+          <include name="addRole"/>
           <include name="initialization"/>
         </methods>
       </class> <!-- QAlegendTestCases.TestCases -->

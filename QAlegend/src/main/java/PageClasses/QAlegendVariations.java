@@ -12,6 +12,9 @@ public class QAlegendVariations {
 	
 	WebDriver driver;
 	
+	@FindBy(xpath = "(//i[@class='fa fa-cubes'])[1]")
+	WebElement Productsbutton;
+	
 	@FindBy(xpath = "//span[text()='Variations']")
 	WebElement VariationsButton;
 	
@@ -39,6 +42,11 @@ public class QAlegendVariations {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
+       public void clickOnProductsOption() {
+		
+		//PageUtilities.clickOnElement(Productsbutton);
+    	   Productsbutton.click();
+		}
 	public void clickOnVariationsoption() {
 		
 		//PageUtilities.clickOnElement(VariationsButton);

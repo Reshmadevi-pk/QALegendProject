@@ -68,7 +68,9 @@ public class QAlegendRolesPage {
 	}
 	public void enterRoleToSearch(String rolename) {
 		//PageUtilities.enterText(Rolesearch, rolename);
+		WaitUtility.waitForElementVisibility(Rolesearch, 5);
 		Rolesearch.sendKeys(rolename);
+		
 	}
 	public boolean roleDisplayMessageOption() {
 		return(PageUtilities.isElementDisplayed(roledisplayButton));

@@ -21,7 +21,7 @@ import PageClasses.QAlegendCustomersPage;
 import PageClasses.QAlegendHomePage;
 import PageClasses.QAlegendLoginPage;
 
-import PageClasses.QAlegendProductsPage;
+
 import PageClasses.QAlegendRolesPage;
 import PageClasses.QAlegendSalesCommissionPage;
 import PageClasses.QAlegendUserPage;
@@ -41,7 +41,6 @@ public class TestCases extends BaseClass{
 	QAlegendContactsPage contactspage;
 	QAlegendCustomersPage customerpage;
 	QAlegendCustomerGroupsPage customergroupspage;
-	QAlegendProductsPage productspage;
 	QAlegendBrandsPage brandspage;
 	QAlegendVariations variationpage;
 	Properties prop;//prop obj declaration properties is class
@@ -67,7 +66,7 @@ public class TestCases extends BaseClass{
     customergroupspage=new QAlegendCustomerGroupsPage(driver);
     brandspage=new QAlegendBrandsPage(driver);
     variationpage=new QAlegendVariations(driver);
-    productspage=new QAlegendProductsPage(driver);
+
  
    
 }
@@ -99,7 +98,6 @@ public class TestCases extends BaseClass{
 		rolepage.enterRoleNameOption(rolename);
 		rolepage.clickOnUserTypeOption();
 		rolepage.clickOnRolesSaveOption();
-		Thread.sleep(2000);
 		rolepage.enterRoleToSearch(rolename);
 		Assert.assertEquals(rolepage.roleDisplayMessageOption(), true);
 
@@ -156,13 +154,14 @@ public class TestCases extends BaseClass{
 		loginpage.loginToQAlegend(prop.getProperty("username"),prop.getProperty("password"));
 		homepage.clickOnEndTour();
 		homepage.clickOnUserManagementOption();
-		productspage.clickOnProductsOption();
+		variationpage.clickOnProductsOption();
 		variationpage.clickOnVariationsoption();
 		variationpage.clickOnAddVariationsoption();
-		String Variationnametab=prop.getProperty("VariationName")+FakerUtility.randomNumberGenerator();
+		String Variationnametab=prop.getProperty("VariationName");
 		String Addvariationvaluestab=prop.getProperty("Addvariationvalues")+FakerUtility.randomNumberGenerator();
 		variationpage.insertVariationDetails(Variationnametab, Addvariationvaluestab);
 		variationpage.clickOnSaveVariationOption();
+		Thread.sleep(2000);
 		variationpage.enterVariationSearch(Variationnametab);
 		Assert.assertEquals(variationpage.variationMessageDisplayButton(), true);
 
@@ -173,7 +172,7 @@ public class TestCases extends BaseClass{
 		loginpage.loginToQAlegend(prop.getProperty("username"),prop.getProperty("password"));
 		homepage.clickOnEndTour();
 		homepage.clickOnUserManagementOption();
-		productspage.clickOnProductsOption();
+		variationpage.clickOnProductsOption();
 		brandspage.clickOnBrandOption();
 		brandspage.clickOnAddBrandOption();
 		String brandnameadd=prop.getProperty("Brandname");
@@ -198,30 +197,9 @@ public class TestCases extends BaseClass{
 		String calculationpercent=prop.getProperty("CalculationPercentage");
 		customergroupspage.insertCustomerGroupsDetails(customer, calculationpercent);
 		customergroupspage.clickOnCustomerGroupSaveOption();
+		Thread.sleep(2000);
         customergroupspage.enterCustomergroups(customer);
 		Assert.assertEquals(customergroupspage.customergroupMessageDisplayed(), true);	
-		
-	}
-	@Test
-	public void productsPage() throws IOException {
-		loginpage.loginToQAlegend(prop.getProperty("username"),prop.getProperty("password"));
-		homepage.clickOnEndTour();
-		homepage.clickOnUserManagementOption();
-		productspage.clickOnProductsOption();
-		productspage.clickOnListProductsOption();
-		productspage.clickOnAddProductsOption();
-		Random rand=new Random();
-		int randomnumber=rand.nextInt(10000);
-		String productname=ExcelUtility.getString(1,0,"//src//main//java//resources//Userdetails.xlsx", "Sheet5");
-		String brand=ExcelUtility.getString(1,1,"//src//main//java//resources//Userdetails.xlsx", "Sheet5");
-		String unit=ExcelUtility.getString(1,2,"//src//main//java//resources//Userdetails.xlsx", "Sheet5");
-		String category=ExcelUtility.getString(1,3,"//src//main//java//resources//Userdetails.xlsx", "Sheet5");
-		String barcodetype=ExcelUtility.getString(1,4,"//src//main//java//resources//Userdetails.xlsx", "Sheet5");
-		String alertquantity=ExcelUtility.getNumeric(1,6,"//src//main//java//resources//Userdetails.xlsx", "Sheet5");
-		String sellingpricetaxtype=ExcelUtility.getString(1,7,"//src//main//java//resources//Userdetails.xlsx", "Sheet5");
-		String producttypeproduct=ExcelUtility.getString(1,8,"//src//main//java//resources//Userdetails.xlsx", "Sheet5");
-		String exctax=ExcelUtility.getNumeric(1,9,"//src//main//java//resources//Userdetails.xlsx", "Sheet5");
-		productspage.insertProductsDetails(productname, brand, unit, barcodetype, alertquantity, sellingpricetaxtype, producttypeproduct, exctax);
 		
 	}
 }

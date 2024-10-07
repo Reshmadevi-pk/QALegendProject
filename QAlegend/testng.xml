@@ -15,7 +15,14 @@
     <classes>
       <class name="QAlegendTestCases.TestCases"/>
       <methods>
-      <include name="productsPage"></include>
+      <include name="createUser"></include>
+       <<include name="addRole"></include>
+       <include name="commissionPage"></include>
+       <include name="contactsPage"></include>
+       <include name="customersPage"></include>
+       <include name="variationPage"></include>
+       <include name="brandsPage"></include>
+        <include name="customersGroupsPage"></include>
       </methods>
     </classes>
   </test> <!-- Test -->

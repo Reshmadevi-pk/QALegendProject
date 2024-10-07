@@ -15,7 +15,7 @@
     <classes>
       <class name="QAlegendTestCases.TestCases"/>
       <methods>
-      <include name="commissionPage"></include>
+      <include name="productsPage"></include>
       </methods>
     </classes>
   </test> <!-- Test -->

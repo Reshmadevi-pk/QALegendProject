@@ -44,27 +44,31 @@ public class QAlegendRolesPage {
 
 	public void clickOnRolesOption() {
 		
-	PageUtilities.clickOnElement(Rolesbutton);
+	//PageUtilities.clickOnElement(Rolesbutton);
+		Rolesbutton.click();
 		
 		
 	}
 
 	public void clickOnAddRolesOption() {
-		PageUtilities.clickOnElement(Addrolebutton);
+		//PageUtilities.clickOnElement(Addrolebutton);
+		Addrolebutton.click();
+		
 	}
 	public void enterRoleNameOption(String rolename) {
 		PageUtilities.enterText(Rolenameox, rolename);
 		
 	}
 	public void clickOnUserTypeOption() {
-		PageUtilities.clickOnElement(Usertypebutton);
+		//PageUtilities.clickOnElement(Usertypebutton);
 }
 	public void clickOnRolesSaveOption() {
-		PageUtilities.clickOnElement(Rolessavebutton);
+		//PageUtilities.clickOnElement(Rolessavebutton);
+		Rolessavebutton.click();
 	}
 	public void enterRoleToSearch(String rolename) {
-		WaitUtility.waitForElementVisibility(Rolesearch, 5);
-		PageUtilities.enterText(Rolesearch, rolename);
+		//PageUtilities.enterText(Rolesearch, rolename);
+		Rolesearch.sendKeys(rolename);
 	}
 	public boolean roleDisplayMessageOption() {
 		return(PageUtilities.isElementDisplayed(roledisplayButton));

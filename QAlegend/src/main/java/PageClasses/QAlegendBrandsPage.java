@@ -41,21 +41,25 @@ public QAlegendBrandsPage(WebDriver driver) {
 
 public void clickOnBrandOption() {
 	
-	PageUtilities.clickOnElement(BrandButton);
+	//PageUtilities.clickOnElement(BrandButton);
+	BrandButton.click();
 }
 public void clickOnAddBrandOption() {
-	PageUtilities.clickOnElement(Addbrandbutton);
+	//PageUtilities.clickOnElement(Addbrandbutton);
+	Addbrandbutton.click();
 }
 public void insertBrandDetails(String brandname,String shortdescrip) {
 	PageUtilities.enterText(Brandname, brandname);
 	PageUtilities.enterText(ShortDescription, shortdescrip);
 }
 public void clickOnSaveBrandButton() {
-	PageUtilities.clickOnElement(Brandsavebutton);
+	//PageUtilities.clickOnElement(Brandsavebutton);
+	Brandsavebutton.click();
 }
 public void enterBrandsearch(String Brandname) {
 	WaitUtility.waitForElementVisibility(brandSearchbutton, 5);
-	PageUtilities.enterText(brandSearchbutton, Brandname); 
+	//PageUtilities.enterText(brandSearchbutton, Brandname);
+	brandSearchbutton.sendKeys(Brandname);
 }
 public  boolean brandMessageDisplay() {
 	return(PageUtilities.isElementDisplayed(brandMessagedisplay));

@@ -60,10 +60,12 @@ public QAlegendSalesCommissionPage(WebDriver driver) {
 
 public void salesCommissionAgentOption() {
 	
-	PageUtilities.clickOnElement(SalesCommissionAgentbutton);
+	//PageUtilities.clickOnElement(SalesCommissionAgentbutton);
+	SalesCommissionAgentbutton.click();
 }
 public void clickOnAddSalesCommissionOption() {
-	PageUtilities.clickOnElement(Addsalescommissionbutton);
+	//PageUtilities.clickOnElement(Addsalescommissionbutton);
+	Addsalescommissionbutton.click();
 }
 public String insertSalesCommisionDetails(String filepath,String sheetname) throws IOException {
 	String prefix=ExcelUtility.getString(1,0,"//src//main//java//resources//Userdetails.xlsx", "Sheet2");
@@ -84,11 +86,13 @@ public String insertSalesCommisionDetails(String filepath,String sheetname) thro
 }
 public void clickOnCommissionSaveOption() {
 	
-	PageUtilities.clickOnElement(Commissionsavebutton);
+	//PageUtilities.clickOnElement(Commissionsavebutton);
+	Commissionsavebutton.click();
 }
 public void enterSalesCommissionSearch(String email) {
 	WaitUtility.waitForElementVisibility(salescommissionsearch, 5);
-	PageUtilities.enterText(salescommissionsearch, email);	
+	//PageUtilities.enterText(salescommissionsearch, email);
+	salescommissionsearch.sendKeys(email);
 	
 }
 public boolean rolesMessageDisplay() {

@@ -29,13 +29,16 @@ public class QAlegendHomePage {
 	}
 	public void clickOnUserManagementOption() {
 	 
-		PageUtilities.clickOnElement(UserManagementoption);
+		//PageUtilities.clickOnElement(UserManagementoption);
+		UserManagementoption.click();
 
 	}
 	public void clickOnUserAction() {
-		PageUtilities.clickOnElement(Usersoption);
+		//PageUtilities.clickOnElement(Usersoption);
+		Usersoption.click();
 	}
 	public void clickOnEndTour() {
-		PageUtilities.clickOnElement(Endtouroption);
+		//PageUtilities.clickOnElement(Endtouroption);
+		Endtouroption.click();
 	}
 }

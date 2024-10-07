@@ -74,13 +74,17 @@ public QAlegendContactsPage(WebDriver driver) {
 
 public void clickOnContactsOption() {
 	
-	PageUtilities.clickOnElement(Contactsbutton);
+	//PageUtilities.clickOnElement(Contactsbutton);
+	Contactsbutton.click();
 }
 public void clickOnSuppliersOption() {
-	PageUtilities.clickOnElement(Suppliersbutton);
+	//PageUtilities.clickOnElement(Suppliersbutton);
+	Suppliersbutton.click();
 }
 public void clickOnAddSupplierOption() {
-	PageUtilities.clickOnElement(Addsupplierbutton);
+	//PageUtilities.clickOnElement(Addsupplierbutton);
+	Addsupplierbutton.click();
+	
 }
 public String insertSuppliersDetails(String filepath,String sheetname) throws IOException {
 	String contacttype=ExcelUtility.getString(1,0,"//src//main//java//resources//Userdetails.xlsx", "Sheet3");
@@ -103,11 +107,13 @@ public String insertSuppliersDetails(String filepath,String sheetname) throws IO
 	
 }
 public void supplierSaveOption() {
-	PageUtilities.clickOnElement(Supplierssavebutton);
+	//PageUtilities.clickOnElement(Supplierssavebutton);
+	Supplierssavebutton.click();
 }
 public void enterSupplierSearch(String Businessname) {
 	WaitUtility.waitForElementVisibility(SupplerSearchbutton, 5);
-	PageUtilities.enterText(SupplerSearchbutton, Businessname);
+	//PageUtilities.enterText(SupplerSearchbutton, Businessname);
+	SupplerSearchbutton.sendKeys(Businessname);
 }
 
 public boolean supplierRolesDisplayOption() {

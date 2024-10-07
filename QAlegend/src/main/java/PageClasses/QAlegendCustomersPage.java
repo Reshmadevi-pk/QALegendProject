@@ -66,10 +66,12 @@ public class QAlegendCustomersPage {
 
 
 	public void clickOnCustomerOption() {
-		PageUtilities.clickOnElement(Customerbox);
+		//PageUtilities.clickOnElement(Customerbox);
+		Customerbox.click();
 	}
 	public void clickonAddCustomerOption() {
-		PageUtilities.clickOnElement(Addcustomerbutton);
+		//PageUtilities.clickOnElement(Addcustomerbutton);
+		Addcustomerbutton.click();
 	}
  
 	public String insertCustomerDetails(String filepath,String sheetname) throws IOException {
@@ -90,13 +92,15 @@ public class QAlegendCustomersPage {
 		
 	}
 	public void clickOnCustomerSaveButton() {
-		PageUtilities.clickOnElement(Customersavebutton);
+		//PageUtilities.clickOnElement(Customersavebutton);
+		Customersavebutton.click();
 		
 		
 	}
 	public void enterCustomerSerach(String customername) {
 		WaitUtility.waitForElementVisibility(Customersearchbutton, 5);
-		PageUtilities.enterText(Customersearchbutton, customername);
+		//PageUtilities.enterText(Customersearchbutton, customername);
+		Customersearchbutton.sendKeys(customername);
 	}
 	public boolean customerMessageDisplay() {
 		return(PageUtilities.isElementDisplayed(customernamedisplay));

@@ -40,22 +40,26 @@ public class QAlegendCustomerGroupsPage {
 	}
 	public void clickOnCustomerGroupOption() {
 		
-		PageUtilities.clickOnElement(CustomerGroups);
+		//PageUtilities.clickOnElement(CustomerGroups);
+		CustomerGroups.click();
 	}
 public void clickOnAddCustomerGroupOption() {
 		
-		PageUtilities.clickOnElement(Addcustomergroups);
+		//PageUtilities.clickOnElement(Addcustomergroups);
+	    Addcustomergroups.click();
 }
 public void insertCustomerGroupsDetails(String groupname,String percent) {
 	PageUtilities.enterText(Customergroupname, groupname);
 	PageUtilities.enterText(Customergroupcalculationpercentage, percent);
 }
 public void clickOnCustomerGroupSaveOption() {
-	PageUtilities.clickOnElement(Customergroupsavebutton);
+	//PageUtilities.clickOnElement(Customergroupsavebutton);
+	Customergroupsavebutton.click();
 }
 public void enterCustomergroups(String Customergroupname) {
 	WaitUtility.waitForElementVisibility(customerGroupssearch, 5);
-	PageUtilities.enterText(customerGroupssearch, Customergroupname);
+	//PageUtilities.enterText(customerGroupssearch, Customergroupname);
+	customerGroupssearch.sendKeys(Customergroupname);
 }
 public boolean customergroupMessageDisplayed() {
 	return(PageUtilities.isElementDisplayed(customergroupmessageDisplayed));

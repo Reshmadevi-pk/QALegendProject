@@ -31,9 +31,6 @@ public class QAlegendProductsPage {
 	WebElement Unit;
 	
 	
-	@FindBy(id = "//*[@name='category_id']")
-	WebElement Category;
-	
 	@FindBy(id = "select2-barcode_type-container")
 	WebElement Barcode;
 	
@@ -71,13 +68,12 @@ public class QAlegendProductsPage {
 	public void clickOnAddProductsOption() {
 		PageUtilities.clickOnElement(Addproducts);
 	}
-	public void insertProductsDetails(String name,String brand,String productunit,String category,String barcode,
+	public void insertProductsDetails(String name,String brand,String productunit,String barcode,
 			String alertquantity,String sellingpricetax,String producttype,String exctac) {
 		
 		PageUtilities.enterText(Productname, name);
 		PageUtilities.dropdownSelectByVisibleText(Brand, brand);
 		PageUtilities.dropdownSelectByVisibleText(Unit, productunit);
-		PageUtilities.dropdownSelectByVisibleText(Category, category);
 		PageUtilities.dropdownSelectByVisibleText(Barcode, barcode);
 		PageUtilities.enterText(Alertquantity, alertquantity);
 		PageUtilities.dropdownSelectByVisibleText(SellingPriceTaxType, sellingpricetax);

@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="QAlegendTestCases.TestCases" class="method navigator-link" hash-for-method="commissionPage">commissionPage</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="QAlegendTestCases.TestCases" class="method navigator-link" hash-for-method="productsPage">productsPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -126,38 +126,18 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="commissionPage">
-                  </a> <!-- commissionPage -->
-                  <span class="method-name">commissionPage</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=128.0.6613.138)
-Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b397586be5aeba97f537c1063165ba7d, sendKeysToElement {id=f.D95C02F67F3BB7CD1BED3D4BD73ECA40.d.7EE15F9EECA5721A07289B036DBAD4A5.e.97, value=[Ljava.lang.CharSequence;@74d4633a}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\MYPC~1\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49966}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49966/devtoo..., se:cdpVersion: 128.0.6613.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (b397586be5aeba97f537c1063165ba7d)] -&gt; xpath: //input[@class=&apos;form-control input-sm&apos;]]
-Session ID: b397586be5aeba97f537c1063165ba7d
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy12.sendKeys(Unknown Source)
-	at Utilities.PageUtilities.enterText(PageUtilities.java:20)
-	at PageClasses.QAlegendSalesCommissionPage.enterSalesCommissionSearch(QAlegendSalesCommissionPage.java:91)
-	at QAlegendTestCases.TestCases.commissionPage(TestCases.java:115)
+                  <a name="productsPage">
+                  </a> <!-- productsPage -->
+                  <span class="method-name">productsPage</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.ss.usermodel.Cell.getStringCellValue()&quot; because &quot;c&quot; is null
+	at Utilities.ExcelUtility.getString(ExcelUtility.java:27)
+	at QAlegendTestCases.TestCases.productsPage(TestCases.java:218)
 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-... Removed 22 stack frames
+... Removed 13 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -181,7 +161,7 @@ Session ID: b397586be5aeba97f537c1063165ba7d
     &lt;classes&gt;
       &lt;class name=&quot;QAlegendTestCases.TestCases&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;commissionPage&quot;/&gt;
+          &lt;include name=&quot;productsPage&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- QAlegendTestCases.TestCases --&gt;
     &lt;/classes&gt;
@@ -225,14 +205,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'commissionPage')
+data.setCell(0, 1, 'productsPage')
 data.setCell(0, 2, 'QAlegendTestCases.TestCases')
-data.setCell(0, 3, 5426);
+data.setCell(0, 3, 13651);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 seconds</span>
+              <span class="suite-total-time">Total running time: 13 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -247,25 +227,27 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">7 ignored methods</span>
+            <span class="header-content">8 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">QAlegendTestCases.TestCases</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">customersGroupsPage</span>
-                <br/>
                 <span class="ignored-method-name">customersPage</span>
-                <br/>
-                <span class="ignored-method-name">brandsPage</span>
                 <br/>
                 <span class="ignored-method-name">addRole</span>
                 <br/>
+                <span class="ignored-method-name">customersGroupsPage</span>
+                <br/>
                 <span class="ignored-method-name">contactsPage</span>
+                <br/>
+                <span class="ignored-method-name">createUser</span>
                 <br/>
                 <span class="ignored-method-name">variationPage</span>
                 <br/>
-                <span class="ignored-method-name">createUser</span>
+                <span class="ignored-method-name">brandsPage</span>
+                <br/>
+                <span class="ignored-method-name">commissionPage</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -285,8 +267,8 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">commissionPage</span>
-                <span class="method-start">8115 ms</span>
+                <span class="method-name">productsPage</span>
+                <span class="method-start">12961 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

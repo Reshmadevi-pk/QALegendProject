@@ -73,7 +73,8 @@ public class QAlegendUserPage {
 
 	public void clickOnUserAddOption() {
 		
-		PageUtilities.clickOnElement(UserAddOption);
+		//PageUtilities.clickOnElement(UserAddOption);
+		UserAddOption.click();
 	}
 	
 	public String insertUserQAlegend(String filepath, String sheetname) throws IOException {
@@ -82,8 +83,8 @@ public class QAlegendUserPage {
 		String lastname=ExcelUtility.getString(1,2,"//src//main//java//resources//Userdetails.xlsx", "Sheet1");
 		String email=FakerUtility.randomNumberGenerator()+ExcelUtility.getString(1,3,"//src//main//java//resources//Userdetails.xlsx", "Sheet1");
 		String username=FakerUtility.randomNumberGenerator()+ExcelUtility.getString(1,4,"//src//main//java//resources//Userdetails.xlsx", "Sheet1");
-		String password=FakerUtility.randomNumberGenerator()+ExcelUtility.getString(1,5,"//src//main//java//resources//Userdetails.xlsx", "Sheet1");
-		String confirmpassword=FakerUtility.randomNumberGenerator()+ExcelUtility.getString(1,6,"//src//main//java//resources//Userdetails.xlsx", "Sheet1");
+		String password=ExcelUtility.getString(1,5,"//src//main//java//resources//Userdetails.xlsx", "Sheet1");
+		String confirmpassword=ExcelUtility.getString(1,6,"//src//main//java//resources//Userdetails.xlsx", "Sheet1");
 		String salescommissionpercentage=ExcelUtility.getNumeric(1,7,"//src//main//java//resources//Userdetails.xlsx", "Sheet1");
 		PageUtilities.enterText(Surnamebox, prefix);
 		PageUtilities.enterText(Firstnamebox, firstname);
@@ -91,6 +92,7 @@ public class QAlegendUserPage {
 		PageUtilities.enterText(Emailbox, email);
 		PageUtilities.enterText(Usernamebox, username);
 		PageUtilities.enterText(Passwordbox, password);
+		System.out.println(password+confirmpassword);
 		PageUtilities.enterText(Confirmpasswordbox, confirmpassword);
 		PageUtilities.enterText(Salescommissionbox, salescommissionpercentage);
 		return username;
@@ -99,12 +101,14 @@ public class QAlegendUserPage {
 		
 	}
 	public void clickOnSaveButton() {
-		PageUtilities.clickOnElement(Submituserbuttonoption);
+		//PageUtilities.clickOnElement(Submituserbuttonoption);
+		Submituserbuttonoption.click();
 	}
 
 	public void enterUserToSearch(String username) {
 		WaitUtility.waitForElementVisibility(searchButton, 5);
-		PageUtilities.enterText(searchButton, username);
+		//PageUtilities.enterText(searchButton, username);
+		searchButton.sendKeys(username);
 	
 }
 	public void deleteUser() {

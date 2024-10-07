@@ -99,11 +99,12 @@ public class TestCases extends BaseClass{
 		rolepage.enterRoleNameOption(rolename);
 		rolepage.clickOnUserTypeOption();
 		rolepage.clickOnRolesSaveOption();
+		Thread.sleep(2000);
 		rolepage.enterRoleToSearch(rolename);
 		Assert.assertEquals(rolepage.roleDisplayMessageOption(), true);
 
 	}
-	@Test//(retryAnalyzer = RetryAnalyzer.class,groups = {"smoketest"})
+	@Test(retryAnalyzer = RetryAnalyzer.class,groups = {"smoketest"})
 	public void commissionPage() throws IOException, InterruptedException {
 		loginpage.loginToQAlegend(prop.getProperty("username"),prop.getProperty("password"));
 		homepage.clickOnEndTour();
@@ -112,6 +113,7 @@ public class TestCases extends BaseClass{
 		salescommissionpage.clickOnAddSalesCommissionOption();
 		String email=salescommissionpage.insertSalesCommisionDetails(excelFilePath,"Sheet2");
 		salescommissionpage.clickOnCommissionSaveOption();
+		Thread.sleep(2000);
 		salescommissionpage.enterSalesCommissionSearch(email);
 		Assert.assertEquals(salescommissionpage.rolesMessageDisplay(), true);
 		
@@ -126,6 +128,7 @@ public class TestCases extends BaseClass{
 		contactspage.clickOnAddSupplierOption();
 		String businessname=contactspage.insertSuppliersDetails(excelFilePath,"Sheet3");
 	    contactspage.supplierSaveOption();
+	    Thread.sleep(2000);
 	    contactspage.enterSupplierSearch(businessname);
 	    Assert.assertEquals(contactspage.supplierRolesDisplayOption(), true);
 	    
@@ -140,6 +143,7 @@ public class TestCases extends BaseClass{
 		customerpage.clickonAddCustomerOption();
 		String name=customerpage.insertCustomerDetails(excelFilePath,"Sheet4");
 		customerpage.clickOnCustomerSaveButton();
+	    Thread.sleep(2000);
 		customerpage.enterCustomerSerach(name);
 		Assert.assertEquals(customerpage.customerMessageDisplay(), true);
 		
@@ -176,6 +180,7 @@ public class TestCases extends BaseClass{
 		String shortdescriptionadd=prop.getProperty("Shortdescription");	
 		brandspage.insertBrandDetails(brandnameadd, shortdescriptionadd);
 		brandspage.clickOnSaveBrandButton();
+		Thread.sleep(2000);
 		brandspage.enterBrandsearch(brandnameadd);
 		Assert.assertEquals(brandspage.brandMessageDisplay(), true);
 	
@@ -197,7 +202,7 @@ public class TestCases extends BaseClass{
 		Assert.assertEquals(customergroupspage.customergroupMessageDisplayed(), true);	
 		
 	}
-	/*@Test
+	@Test
 	public void productsPage() throws IOException {
 		loginpage.loginToQAlegend(prop.getProperty("username"),prop.getProperty("password"));
 		homepage.clickOnEndTour();
@@ -208,12 +213,15 @@ public class TestCases extends BaseClass{
 		Random rand=new Random();
 		int randomnumber=rand.nextInt(10000);
 		String productname=ExcelUtility.getString(1,0,"//src//main//java//resources//Userdetails.xlsx", "Sheet5");
-		//String brand=ExcelUtility.getString(1,1,"//src//main//java//resources//Userdetails.xlsx", "Sheet5");
-		//String unit=ExcelUtility.getString(1,2,"//src//main//java//resources//Userdetails.xlsx", "Sheet5");
-		//String customeropeningbalance=ExcelUtility.getNumeric(1,3,"//src//main//java//resources//Userdetails.xlsx", "Sheet4");
-		//String customermobile =ExcelUtility.getNumeric(1,4,"//src//main//java//resources//Userdetails.xlsx", "Sheet4");
-		//String customercity =ExcelUtility.getString(1,5,"//src//main//java//resources//Userdetails.xlsx", "Sheet4");
-		productspage.insertProductsDetails(productname, productname, productname, productname, productname, productname, productname, productname, productname);
+		String brand=ExcelUtility.getString(1,1,"//src//main//java//resources//Userdetails.xlsx", "Sheet5");
+		String unit=ExcelUtility.getString(1,2,"//src//main//java//resources//Userdetails.xlsx", "Sheet5");
+		String category=ExcelUtility.getString(1,3,"//src//main//java//resources//Userdetails.xlsx", "Sheet5");
+		String barcodetype=ExcelUtility.getString(1,4,"//src//main//java//resources//Userdetails.xlsx", "Sheet5");
+		String alertquantity=ExcelUtility.getNumeric(1,6,"//src//main//java//resources//Userdetails.xlsx", "Sheet5");
+		String sellingpricetaxtype=ExcelUtility.getString(1,7,"//src//main//java//resources//Userdetails.xlsx", "Sheet5");
+		String producttypeproduct=ExcelUtility.getString(1,8,"//src//main//java//resources//Userdetails.xlsx", "Sheet5");
+		String exctax=ExcelUtility.getNumeric(1,9,"//src//main//java//resources//Userdetails.xlsx", "Sheet5");
+		productspage.insertProductsDetails(productname, brand, unit, barcodetype, alertquantity, sellingpricetaxtype, producttypeproduct, exctax);
 		
-	}*/
+	}
 }

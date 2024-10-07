@@ -41,11 +41,13 @@ public class QAlegendVariations {
 	}
 	public void clickOnVariationsoption() {
 		
-		PageUtilities.clickOnElement(VariationsButton);
+		//PageUtilities.clickOnElement(VariationsButton);
+		VariationsButton.click();
 	}
      public void clickOnAddVariationsoption() {
 		
-		PageUtilities.clickOnElement(AddVariationsButton);
+		//PageUtilities.clickOnElement(AddVariationsButton);
+    	 AddVariationsButton.click();
 	}
      public void insertVariationDetails(String variationname,String variationvalue) {
  		
@@ -53,13 +55,15 @@ public class QAlegendVariations {
  		PageUtilities.enterText(Addvariationvaluesfield, variationvalue);
 }
      public void clickOnSaveVariationOption() {
-    	 PageUtilities.clickOnElement(variationsavebutton);
+    	 //PageUtilities.clickOnElement(variationsavebutton);
+    	 variationsavebutton.click();
     	 	 
     	 
      }
      public void enterVariationSearch(String variationname) {
     	 WaitUtility.waitForElementVisibility(VariationSearch, 5);
-    	 PageUtilities.enterText(VariationSearch, variationname);
+    	 //PageUtilities.enterText(VariationSearch, variationname);
+    	 VariationSearch.sendKeys(variationname);
      }
      public boolean variationMessageDisplayButton() {
      return(PageUtilities.isElementDisplayed(variationmessagedisplay));

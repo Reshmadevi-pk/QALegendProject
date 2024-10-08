@@ -17,7 +17,7 @@ import com.google.common.io.Files;
 
 public class BaseClass {
 	public WebDriver driver; // WebDriver is is an interface in Selenium that provides methods to interact with the browser.
-   public String excelFilePath="//src//main//java//resources//Userdetails.xlsx";
+    public String excelFilePath="//src//main//java//resources//Userdetails.xlsx";
 	public WebDriver browserIntialization(String browsername)
 	{
 	if(browsername.equalsIgnoreCase("Chrome"))

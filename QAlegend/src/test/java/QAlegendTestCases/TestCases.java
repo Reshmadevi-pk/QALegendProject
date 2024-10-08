@@ -2,6 +2,8 @@ package QAlegendTestCases;
 
 import org.testng.annotations.Test;
 
+import com.google.common.util.concurrent.Monitor;
+
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
@@ -111,7 +113,6 @@ public class TestCases extends BaseClass{
 		salescommissionpage.clickOnAddSalesCommissionOption();
 		String email=salescommissionpage.insertSalesCommisionDetails(excelFilePath,"Sheet2");
 		salescommissionpage.clickOnCommissionSaveOption();
-		Thread.sleep(2000);
 		salescommissionpage.enterSalesCommissionSearch(email);
 		Assert.assertEquals(salescommissionpage.rolesMessageDisplay(), true);
 		
@@ -126,7 +127,6 @@ public class TestCases extends BaseClass{
 		contactspage.clickOnAddSupplierOption();
 		String businessname=contactspage.insertSuppliersDetails(excelFilePath,"Sheet3");
 	    contactspage.supplierSaveOption();
-	    Thread.sleep(2000);
 	    contactspage.enterSupplierSearch(businessname);
 	    Assert.assertEquals(contactspage.supplierRolesDisplayOption(), true);
 	    
@@ -141,7 +141,6 @@ public class TestCases extends BaseClass{
 		customerpage.clickonAddCustomerOption();
 		String name=customerpage.insertCustomerDetails(excelFilePath,"Sheet4");
 		customerpage.clickOnCustomerSaveButton();
-	    Thread.sleep(2000);
 		customerpage.enterCustomerSerach(name);
 		Assert.assertEquals(customerpage.customerMessageDisplay(), true);
 		
@@ -161,7 +160,6 @@ public class TestCases extends BaseClass{
 		String Addvariationvaluestab=prop.getProperty("Addvariationvalues")+FakerUtility.randomNumberGenerator();
 		variationpage.insertVariationDetails(Variationnametab, Addvariationvaluestab);
 		variationpage.clickOnSaveVariationOption();
-		Thread.sleep(2000);
 		variationpage.enterVariationSearch(Variationnametab);
 		Assert.assertEquals(variationpage.variationMessageDisplayButton(), true);
 
@@ -179,7 +177,6 @@ public class TestCases extends BaseClass{
 		String shortdescriptionadd=prop.getProperty("Shortdescription");	
 		brandspage.insertBrandDetails(brandnameadd, shortdescriptionadd);
 		brandspage.clickOnSaveBrandButton();
-		Thread.sleep(2000);
 		brandspage.enterBrandsearch(brandnameadd);
 		Assert.assertEquals(brandspage.brandMessageDisplay(), true);
 	
@@ -197,7 +194,6 @@ public class TestCases extends BaseClass{
 		String calculationpercent=prop.getProperty("CalculationPercentage");
 		customergroupspage.insertCustomerGroupsDetails(customer, calculationpercent);
 		customergroupspage.clickOnCustomerGroupSaveOption();
-		Thread.sleep(2000);
         customergroupspage.enterCustomergroups(customer);
 		Assert.assertEquals(customergroupspage.customergroupMessageDisplayed(), true);	
 		

@@ -2,15 +2,15 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-07T18:29:04 IST" name="Suite" finished-at="2024-10-07T18:29:22 IST" duration-ms="17926">
+  <suite started-at="2024-10-08T21:08:35 IST" name="Suite" finished-at="2024-10-08T21:09:06 IST" duration-ms="30510">
     <groups>
       <group name="smoketest">
-        <method signature="TestCases.variationPage()[pri:0, instance:QAlegendTestCases.TestCases@7c711375]" name="variationPage" class="QAlegendTestCases.TestCases"/>
+        <method signature="TestCases.createUser()[pri:0, instance:QAlegendTestCases.TestCases@7c711375]" name="createUser" class="QAlegendTestCases.TestCases"/>
       </group> <!-- smoketest -->
     </groups>
-    <test started-at="2024-10-07T18:29:04 IST" name="Test" finished-at="2024-10-07T18:29:22 IST" duration-ms="17926">
+    <test started-at="2024-10-08T21:08:35 IST" name="Test" finished-at="2024-10-08T21:09:06 IST" duration-ms="30510">
       <class name="QAlegendTestCases.TestCases">
-        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:QAlegendTestCases.TestCases@7c711375]" started-at="2024-10-07T18:29:04 IST" name="initialization" finished-at="2024-10-07T18:29:14 IST" duration-ms="9959" status="PASS">
+        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:QAlegendTestCases.TestCases@7c711375]" started-at="2024-10-08T21:08:35 IST" name="initialization" finished-at="2024-10-08T21:08:50 IST" duration-ms="14527" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -21,10 +21,10 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method signature="variationPage()[pri:0, instance:QAlegendTestCases.TestCases@7c711375]" started-at="2024-10-07T18:29:14 IST" name="variationPage" finished-at="2024-10-07T18:29:22 IST" duration-ms="7770" status="PASS">
+        <test-method signature="createUser()[pri:0, instance:QAlegendTestCases.TestCases@7c711375]" started-at="2024-10-08T21:08:50 IST" name="createUser" finished-at="2024-10-08T21:09:06 IST" duration-ms="15819" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- variationPage -->
+        </test-method> <!-- createUser -->
       </class> <!-- QAlegendTestCases.TestCases -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->

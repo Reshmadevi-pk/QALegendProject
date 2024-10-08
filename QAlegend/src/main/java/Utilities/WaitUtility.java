@@ -42,4 +42,5 @@ public static void waitForFrameToBeAvailable(int timeoutInSeconds,WebElement ele
 public static void waitForTextToBePresent(int timeoutInSeconds,WebElement element,String value) {
 	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(timeoutInSeconds));
 	wait.until(ExpectedConditions.textToBePresentInElement(element, value));
-}}
+}
+}
